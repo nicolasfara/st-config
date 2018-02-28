@@ -1,0 +1,8 @@
+elems:
+
+  - src:  ^(config.def.h)$
+    dst:  "<%= var! :st_config_path %>"
+    only: f?st
+
+
+# vim: set filetype=eruby.yaml :
