@@ -16,7 +16,7 @@ static int borderpx = 2;
  * 4: value of shell in /etc/passwd
  * 5: value of shell in config.h
  */
-static char shell[] = "/bin/sh";
+static char shell[] = "/bin/zsh";
 static char *utmp = NULL;
 static char stty_args[] = "stty raw pass8 nl -echo -iexten -cstopb 38400";
 
@@ -82,47 +82,36 @@ static char termname[] = "st-256color";
  */
 static unsigned int tabspaces = 8;
 
-/* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	/* 8 normal colors */
-	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
-
-	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
-
-	[255] = 0,
-
-	/* more colors can be added after 255 to use with DefaultXX */
-	"#cccccc",
-	"#555555",
+  "#343d46", /* base01 */
+  "#bf616a", /* base08 */
+  "#a3be8c", /* base0B */
+  "#ebcb8b", /* base0A */
+  "#8fa1b3", /* base0D */
+  "#ab7967", /* base0F */
+  "#96b5b4", /* base0C */
+  "#dfe1e8", /* base06 */
+  "#2b303b", /* base00 */
+  "#d08770", /* base09 */
+  "#4f5b66", /* base02 */
+  "#65737e", /* base03 */
+  "#a7adba", /* base04 */
+  "#b48ead", /* base0E */
+  "#c0c5ce", /* base05 */
+  "#eff1f5", /* base07 */
 };
 
-
 /*
- * Default colors (colorname index)
- * foreground, background, cursor, reverse cursor
- */
-static unsigned int defaultfg = 7;
-static unsigned int defaultbg = 0;
-static unsigned int defaultcs = 256;
-static unsigned int defaultrcs = 257;
+* Default colors (colorname index)
+* foreground, background, cursor, reverse
+* cursor
+*/
+static unsigned int defaultfg = 12;
+static unsigned int defaultbg = 8;
+static unsigned int defaultcs = 14;
+static unsigned int defaultrcs = 15;
 
-/*
- * Default shape of cursor
+ /* Default shape of cursor
  * 2: Block ("█")
  * 4: Underline ("_")
  * 6: Bar ("|")
@@ -142,7 +131,7 @@ static unsigned int mousebg = 0;
  * will reverse too. Another logic would only make the simple feature too
  * complex.
  */
-static unsigned int defaultitalic = 11;
+static unsigned int defaultitalic = 7;
 static unsigned int defaultunderline = 7;
 
 /*
