@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char font[] = "Hack:pixelsize=36:antialias=true:autohint=true";
+static char font[] = "<%= get_var! 'font.name' %>:pixelsize=<%= get_var! 'font.size' %>:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
